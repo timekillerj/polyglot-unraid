@@ -9,7 +9,7 @@
   <Overview>udi-polyglot<Category/>
   <WebUI>https://[IP]:[PORT:3000]</WebUI>
   <TemplateURL/>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/timekillerj/polyglot-unraid/master/udi.png</Icon>
   <ExtraParams></ExtraParams>
   <DateInstalled>1550541232</DateInstalled>
   <Description>udi-polyglot</Description>
