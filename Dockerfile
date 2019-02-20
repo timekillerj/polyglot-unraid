@@ -13,6 +13,8 @@ ENV LANGUAGE en_US.UTF-8
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
+ADD install.sh /install.sh
+RUN chmod 755 /install.sh
 
 RUN mkdir -p /data/db
 RUN apt-get update && \
@@ -30,10 +32,8 @@ RUN apt-get update && \
 # 80 = HTTP, 443 = HTTPS, 3000 = Express server(dev), 4200 = Angular2 (dev)
 EXPOSE 3000
 
-RUN mkdir -p /app
 WORKDIR /app
-RUN wget -q https://github.com/Einstein42/udi-polyglotv2/raw/master/binaries/polyglot-v2-linux-x64.tar.gz
-RUN tar -zxf /app/polyglot-v2-linux-x64.tar.gz
+RUN /install.sh
 
 # Run Polyglot
 CMD /run.sh
