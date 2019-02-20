@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-mongod &
+mongod --bind_ip 127.0.0.1 &
 
 # Wait for mongodb to come online.
 echo -n "Waiting for mongodb to come online..."
